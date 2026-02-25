@@ -13,6 +13,10 @@ import json
 import hashlib
 import os
 from datetime import datetime
+try:
+    from system.documentation_engine import log_task_event
+except ImportError:
+    from documentation_engine import log_task_event
 
 TASK_REGISTRY_PATH = "d:/IMP/GitHub/nishadraj/system/task_registry.json"
 
@@ -43,9 +47,16 @@ class TaskEngine:
                     return task
         return None
 
-    def update_task_status(self, task_id, new_status):
+    def update_task_status(self, task_id, new_status, notes=""):
         for task in self.registry['tasks']:
             if task['id'] == task_id:
+                # Phase 3: Hard Enforcement
+                if new_status == 'COMPLETED':
+                    module = task.get('modules_affected', ['SYSTEM'])[0]
+                    if not log_task_event(module=module, task_id=task_id, status=new_status, notes=notes):
+                        print(f"ERROR: Documentation logging failed for task {task_id}. Completion blocked.")
+                        return False
+
                 task['status'] = new_status
                 task['updated_at'] = datetime.now().isoformat()
                 self.save_registry()

@@ -8,4 +8,5 @@ Copyright © Jawahar R Mallah | AITDL
 
 from app.database.session import Base
 # Import all models here for Alembic to detect them
-# from app.models.user import User
+from app.models.user import User
+from app.models.audit_log import AuditLog

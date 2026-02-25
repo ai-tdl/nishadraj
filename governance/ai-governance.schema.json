@@ -8,14 +8,14 @@
             "https://aitdl.com",
             "https://nishadraj.com"
         ],
-        "governance_version": "1.2.0",
-        "copyright": "Copyright © Jawahar R Mallah | AITDL",
+        "governance_version": "1.2.5",
+        "copyright": "Copyright \u00c2\u00a9 Jawahar R Mallah | AITDL",
         "usage": "All Rights Reserved"
     },
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "NishadRaj OS Governance Schema",
     "description": "Deterministic enforcement layer for autonomous AI operations.",
-    "version": "1.2.0",
+    "version": "1.2.5",
     "status": "LOCKED",
     "type": "object",
     "additionalProperties": false,

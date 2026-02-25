@@ -8,7 +8,7 @@ Copyright © Jawahar R Mallah | AITDL
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes import health
+from app.routes import health, governance, auth
 import logging
 
 # Setup Logging
@@ -32,8 +32,13 @@ app.add_middleware(
 
 # Include Routers
 app.include_router(health.router)
+app.include_router(governance.router, prefix="/api")
+app.include_router(auth.router, prefix="/api")
 
 @app.on_event("startup")
 async def startup_event():
     logger.info("NishadRaj OS Governed Backend Starting Up...")
     logger.info("Governance Mode: HARD_ENFORCEMENT")
+    logger.info("Auth Status: ACTIVE")
+    logger.info("RBAC: ENABLED")
+    logger.info("JWT: ENABLED")

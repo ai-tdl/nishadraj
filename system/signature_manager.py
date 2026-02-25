@@ -23,20 +23,23 @@ PUBLIC_KEY_PATH = os.path.join(SECURITY_DIR, "system_public_key.pem")
 REGISTRY_PATH = os.path.join(SECURITY_DIR, "signature_registry.json")
 
 GOVERNANCE_FILES = [
-    os.path.join(BASE_DIR, "governance/ai-governance.schema.json"),
-    os.path.join(BASE_DIR, "governance/governance.lock.json"),
-    os.path.join(BASE_DIR, "system/task_registry.json"),
-    os.path.join(BASE_DIR, "docs/DOCUMENTATION_MANIFEST.md"),
-    os.path.join(BASE_DIR, "public/github/ORG_PROFILE_README.md"),
-    os.path.join(BASE_DIR, "public/website/LANDING_PAGE_COPY.md"),
-    os.path.join(BASE_DIR, "public/whitepaper/NISHADRAJ_OS_WHITEPAPER.md"),
-    os.path.join(BASE_DIR, "public/strategy/GLOBAL_OUTREACH_MODEL.md"),
-    os.path.join(BASE_DIR, "public/strategy/ACADEMIC_OUTREACH_PACKET.md"),
-    os.path.join(BASE_DIR, "institutional/ACADEMIC_PARTNERSHIP_FRAMEWORK.md"),
-    os.path.join(BASE_DIR, "institutional/INSTITUTIONAL_ENGAGEMENT_MODEL.md"),
-    os.path.join(BASE_DIR, "institutional/GOVERNANCE_NEUTRALITY_POLICY.md"),
-    os.path.join(BASE_DIR, "financial/SUSTAINABLE_REVENUE_MODEL.md"),
-    os.path.join(BASE_DIR, "financial/ENDOWMENT_STRUCTURE.md")
+    os.path.normpath(os.path.join(BASE_DIR, "governance/ai-governance.schema.json")),
+    os.path.normpath(os.path.join(BASE_DIR, "governance/governance.instance.json")),
+    os.path.normpath(os.path.join(BASE_DIR, "governance/governance.lock.json")),
+    os.path.normpath(os.path.join(BASE_DIR, "system/task_registry.json")),
+    os.path.normpath(os.path.join(BASE_DIR, "system/governance_upgrade.py")),
+    os.path.normpath(os.path.join(BASE_DIR, "docs/GOVERNANCE_UPGRADE_PROTOCOL.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "docs/DOCUMENTATION_MANIFEST.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "public/github/ORG_PROFILE_README.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "public/website/LANDING_PAGE_COPY.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "public/whitepaper/NISHADRAJ_OS_WHITEPAPER.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "public/strategy/GLOBAL_OUTREACH_MODEL.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "public/strategy/ACADEMIC_OUTREACH_PACKET.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "institutional/ACADEMIC_PARTNERSHIP_FRAMEWORK.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "institutional/INSTITUTIONAL_ENGAGEMENT_MODEL.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "institutional/GOVERNANCE_NEUTRALITY_POLICY.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "financial/SUSTAINABLE_REVENUE_MODEL.md")),
+    os.path.normpath(os.path.join(BASE_DIR, "financial/ENDOWMENT_STRUCTURE.md"))
 ]
 
 def ensure_security_dir():

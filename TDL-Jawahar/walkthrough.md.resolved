@@ -1,0 +1,67 @@
+# Walkthrough: Governance Instance Validation
+
+I have implemented strict schema-based runtime validation for the NishadRaj OS governance instance. This ensures that the system's operational parameters are deterministic, cryptographically signed, and verified at runtime.
+
+## Changes Made
+
+### 1. Created Governance Instance File
+Created [governance.instance.json](file:///d:/IMP/GitHub/nishadraj/governance/governance.instance.json) with strict enforcement rules, author attribution policy, and legal governance configurations.
+
+### 2. Upgraded Validator Agent
+Modified [validator_agent.py](file:///d:/IMP/GitHub/nishadraj/system/validator_agent.py) to:
+- Validate [governance.instance.json](file:///d:/IMP/GitHub/nishadraj/governance/governance.instance.json) against the master schema.
+- Enforce cryptographic hash validation for the instance file.
+- Block execution if any governance file hash mismatches the [governance.lock.json](file:///d:/IMP/GitHub/nishadraj/governance/governance.lock.json).
+
+### 3. Updated Lock File
+Added `governance_instance_hash` to [governance.lock.json](file:///d:/IMP/GitHub/nishadraj/governance/governance.lock.json) to anchor the instance state.
+
+### 4. Cryptographic Signature Integration
+Updated [signature_manager.py](file:///d:/IMP/GitHub/nishadraj/system/signature_manager.py) to include the new instance file in the digital signature registry. Normalized paths to ensure cross-platform compatibility (Windows/Linux slashes).
+
+### 5. Audit Trail
+Added log entries to [TASK_LOG.md](file:///d:/IMP/GitHub/nishadraj/docs/TASK_LOG.md) and [CHANGE_IMPACT_LOG.md](file:///d:/IMP/GitHub/nishadraj/docs/CHANGE_IMPACT_LOG.md).
+
+### 6. Created Governance Upgrade Protocol
+Established [GOVERNANCE_UPGRADE_PROTOCOL.md](file:///d:/IMP/GitHub/nishadraj/docs/GOVERNANCE_UPGRADE_PROTOCOL.md) as the formal institutional workflow for governance versioning and upgrades.
+
+### 7. Governance Version Bump Automation
+Implemented [governance_upgrade.py](file:///d:/IMP/GitHub/nishadraj/system/governance_upgrade.py) to automate the formal upgrade protocol.
+
+### 8. Governance Dashboard UI
+Created a public read-only transparency layer for NishadRaj OS governance.
+- **Backend Endpoints**: Implemented `GET` handlers in [governance.py](file:///d:/IMP/GitHub/nishadraj/services/api/app/routes/governance.py) for status, version, hashes, signatures, and tasks.
+- **Frontend Dashboard**: Developed a Next.js App Router project in [apps/web](file:///d:/IMP/GitHub/nishadraj/apps/web) with a premium institutional aesthetic.
+- **Integrity Monitor**: Features real-time status badges, hash breakdown, and cryptographic verification status.
+- **Protected Mode**: Implemented automatic failure behavior that disables the UI and shows a critical alert if system integrity is compromised.
+- **Controlled Versioning**: Supports `--major`, `--minor`, and `--patch` increments.
+- **Deterministic Updates**: Automatically updates schema, lock files, and recomputes hashes.
+- **Integrated Signing & Validation**: Automatically triggers re-signing and full system validation.
+- **Atomic Rollback**: Ensures system state is restored if any part of the upgrade fails.
+
+## Verification Results
+
+### Digital Signature Verification
+All governance files, including the new instance file, have been signed and verified successfully.
+```bash
+python system/signature_manager.py
+# Output: All governance signatures verified successfully.
+```
+
+### Runtime Validation
+The validator agent successfully performs structural validation, hash verification, and signature integrity checks.
+```bash
+python system/validator_agent.py
+# Output: Governance validation PASSED (Deterministic Mode).
+```
+
+### Automated Upgrade Verification
+Verified the automated upgrade process to **v1.2.1**.
+
+### Dashboard UI Verification
+Verified backend API connectivity and frontend layout integrity.
+- **Status Endpoint**: `GET /api/governance/status` returns `system_status: ACTIVE`.
+- **UI Aesthetic**: Deep blue backgrounds with gold accents and responsive grid.
+- **Protection Logic**: Verified that the dashboard renders a red alert banner if API calls fail or return integrity errors.
+
+The system status is now **FULLY_DETERMINISTIC**, follows a formal **GOVERNANCE_UPGRADE_PROTOCOL**, features **AUTOMATED_BUMP_CONTROL**, and provides a **PUBLIC_TRANSPARENCY_DASHBOARD**.

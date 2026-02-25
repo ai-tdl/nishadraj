@@ -39,5 +39,21 @@ Log of all code modifications and their identified impacts.
 | STRATEGY-001 | /public/strategy/*, /institutional/*, /financial/* | Deployed Hybrid Strategic Expansion Framework. | Integrated global outreach, academic/institutional engagement, and revenue models. |
 | HARDENING-001 | /governance/ai-governance.schema.json | Upgraded to v1.2.0. Deterministic locking via `const`. | Blocked additional properties and locked critical governance flags. |
 | VALIDATOR-002 | /system/validator_agent.py | Upgraded to deterministic enforcement. | Replaced symbolic checks with JSON Schema validation and hash verification. |
+| GOV_UPGRADE-001 | /docs/GOVERNANCE_UPGRADE_PROTOCOL.md | Established formal governance upgrade protocol. | Tag: GOV_UPGRADE_v1.0.0, Author: Jawahar R Mallah. |
 
 
+| GOV_UPGRADE_1.2.1 | /governance/* | Upgraded governance to v1.2.1. | Version: 1.2.1, Status: SUCCESS, Time: 2026-02-25. |
+| GOVERNANCE_DASHBOARD_UI_001 | /apps/web, /services/api | Created public governance dashboard and read-only transparency layer. | Status: ACTIVE, Transparency: ENABLED, Time: 2026-02-25. |
+| AUTH_MODULE_002 | /services/api | Implemented JWT Auth, RBAC, and TOTP (2FA) with lockout and audit logging. Institutional Ready. | Status: ACTIVE, Security: INSTITUTIONAL_READY, Time: 2026-02-25. |
+| GOV_UPGRADE_1.2.2 | /governance/* | Upgraded governance to v1.2.2. | Version: 1.2.2, Status: SUCCESS, Time: 2026-02-25. |
+
+--------------------------------
+CHANGE_ID: AUTH_MODULE_002_OPTIONAL_2FA
+MODULE: AUTH
+IMPACT: Authentication + TOTP enabled
+RISK_LEVEL: MEDIUM
+TIMESTAMP: 2026-02-25T14:19:36.538721
+--------------------------------
+| GOV_UPGRADE_1.2.3 | /governance/* | Upgraded governance to v1.2.3. | Version: 1.2.3, Status: SUCCESS, Time: 2026-02-25. |
+| GOV_UPGRADE_1.2.4 | /governance/* | Upgraded governance to v1.2.4. | Version: 1.2.4, Status: SUCCESS, Time: 2026-02-25. |
+| GOV_UPGRADE_1.2.5 | /governance/* | Upgraded governance to v1.2.5. | Version: 1.2.5, Status: SUCCESS, Time: 2026-02-25. |

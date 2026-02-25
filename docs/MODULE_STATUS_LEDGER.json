@@ -1,16 +1,11 @@
 {
     "system": "NishadRaj OS",
     "status": "INITIALIZING",
-    "modules": [
-        {
-            "name": "governance",
-            "status": "ACTIVE",
-            "last_audit": "2026-02-25"
-        },
-        {
-            "name": "system",
-            "status": "ACTIVE",
-            "last_audit": "2026-02-25"
-        }
-    ]
+    "last_audit": "2026-02-25",
+    "modules": {
+        "AUTH": "ACTIVE",
+        "BACKEND_CORE": "ACTIVE",
+        "GOVERNANCE": "LOCKED",
+        "DASHBOARD": "PLANNED"
+    }
 }
