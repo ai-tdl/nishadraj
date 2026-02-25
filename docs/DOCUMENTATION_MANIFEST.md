@@ -24,6 +24,14 @@ This section tracks the official public documents intended for external distribu
 | FOUNDATION_MODEL | [/institutional/FOUNDATION_MODEL.md](file:///d:/IMP/GitHub/nishadraj/institutional/FOUNDATION_MODEL.md) | 1.1.0 | Legal and organizational structure. |
 | POLICY_FRAMEWORK | [/institutional/POLICY_FRAMEWORK.md](file:///d:/IMP/GitHub/nishadraj/institutional/POLICY_FRAMEWORK.md) | 1.1.0 | Rules of conduct and modification protocols. |
 
+## Backend Module (Governed)
+| File Name | Path | Version | Description |
+|-----------|------|---------|-------------|
+| BACKEND_CORE | [/services/api/app/main.py](file:///d:/IMP/GitHub/nishadraj/services/api/app/main.py) | 1.0.0 | FastAPI app entry point with governance hooks. |
+| GOVERNANCE_HOOK | [/services/api/app/core/governance_hook.py](file:///d:/IMP/GitHub/nishadraj/services/api/app/core/governance_hook.py) | 1.0.0 | Core governance enforcement logic. |
+| HEALTH_ROUTER | [/services/api/app/routes/health.py](file:///d:/IMP/GitHub/nishadraj/services/api/app/routes/health.py) | 1.0.0 | System health and governance status endpoint. |
+
+
 ---
 **Last Updated:** 2026-02-25  
 **Hash Registry Reference:** See `governance.lock.json`

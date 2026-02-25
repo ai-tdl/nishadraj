@@ -8,9 +8,9 @@
             "https://aitdl.com",
             "https://nishadraj.com"
         ],
-        "governance_version": "1.1.0"
+        "governance_version": "1.2.0"
     },
-    "governance_schema_hash": "B9F50FE7C8B075B252FAAD43842B9996B23E01C7C00EEDB52C5229DFAB11C393",
+    "governance_schema_hash": "B2F01B25584FE8534CB7725FFAE9BFFB2E772E9D0B4AC742AF1442C2C543E671",
     "task_registry_hash": "04373ecda49477be62970af012f4378b92be7c3cabd8e1e043ff4f7150e18db1",
     "documentation_manifest_hash": "1974C7716406A42EE16659F81B290A570D8EA2E2638AAF9AACF8E2FEF8974609",
     "author_attribution_enforced": true,
@@ -23,7 +23,6 @@
     "block_if_schema_mismatch": true,
     "block_if_hash_mismatch": true,
     "allow_execution": true,
-    "system_status": "ACTIVE",
     "security_layer": "ACTIVE",
     "legal_status": "ACTIVE",
     "AUTHOR_ATTRIBUTION_MODE": "ACTIVE",
@@ -42,5 +41,25 @@
         "brand_name_protected": "NishadRaj OS",
         "unauthorized_use_blocked": true
     },
-    "brand_status": "PUBLIC_READY"
+    "brand_status": "PUBLIC_READY",
+    "hybrid_expansion_status": "ACTIVE",
+    "global_outreach_mode": "ACTIVE",
+    "academic_mode": "ACTIVE",
+    "institutional_mode": "ACTIVE",
+    "revenue_model_active": "TRUE",
+    "expansion_metrics": {
+        "active_global_nodes": 1,
+        "academic_partnerships": 0,
+        "institutional_collaborations": 0,
+        "annual_budget": "TBD",
+        "reserve_fund_status": "INITIALIZED",
+        "risk_level_distribution": {
+            "low": 100,
+            "medium": 0,
+            "high": 0
+        }
+    },
+    "backend_status": "GOVERNED",
+    "monorepo_status": "STABLE",
+    "system_status": "ACTIVE"
 }

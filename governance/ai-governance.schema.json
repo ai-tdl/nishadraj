@@ -8,22 +8,21 @@
             "https://aitdl.com",
             "https://nishadraj.com"
         ],
-        "governance_version": "1.1.0",
+        "governance_version": "1.2.0",
         "copyright": "Copyright © Jawahar R Mallah | AITDL",
         "usage": "All Rights Reserved"
     },
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "NishadRaj OS Governance Schema",
     "description": "Deterministic enforcement layer for autonomous AI operations.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "LOCKED",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
         "execution_model": {
             "type": "string",
-            "enum": [
-                "strict_sequential"
-            ],
+            "const": "strict_sequential",
             "description": "Strict sequential execution model enforcement."
         },
         "enforcement_rules": {
@@ -31,19 +30,19 @@
             "properties": {
                 "dependency_enforcement": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "documentation_mandatory": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "code_integrity_check": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "maintainability_standards": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 }
             }
         },
@@ -52,15 +51,15 @@
             "properties": {
                 "error_handling": {
                     "type": "string",
-                    "default": "strict"
+                    "const": "strict"
                 },
                 "review_protocol": {
                     "type": "string",
-                    "default": "mandatory"
+                    "const": "mandatory"
                 },
                 "pre_execution_validation": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 }
             }
         },
@@ -69,11 +68,11 @@
             "properties": {
                 "autonomous_control": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "authorization_gating": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 }
             }
         },
@@ -82,7 +81,7 @@
             "properties": {
                 "mandatory": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "author_name": {
                     "type": "string",
@@ -108,7 +107,7 @@
                 },
                 "require_in_all_generated_files": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "file_types_enforced": {
                     "type": "array",
@@ -128,19 +127,19 @@
             "properties": {
                 "ownership_enforced": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "license_required": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "block_if_license_removed": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "require_ownership_header_in_all_files": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 }
             }
         },
@@ -149,23 +148,23 @@
             "properties": {
                 "enabled": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "license": {
                     "type": "string",
-                    "default": "AGPL-3.0"
+                    "const": "AGPL-3.0"
                 },
                 "governance_protection_required": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "direct_commit_blocked": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 },
                 "pull_request_required": {
                     "type": "boolean",
-                    "default": true
+                    "const": true
                 }
             }
         },
@@ -186,13 +185,38 @@
                 }
             }
         },
+        "hybrid_expansion_layer": {
+            "type": "object",
+            "properties": {
+                "global_outreach_enabled": {
+                    "type": "boolean",
+                    "const": true
+                },
+                "academic_partnerships_enabled": {
+                    "type": "boolean",
+                    "const": true
+                },
+                "institutional_engagement_enabled": {
+                    "type": "boolean",
+                    "const": true
+                },
+                "sustainable_revenue_model_enabled": {
+                    "type": "boolean",
+                    "const": true
+                },
+                "neutrality_enforced": {
+                    "type": "boolean",
+                    "const": true
+                }
+            }
+        },
         "block_if_schema_mismatch": {
             "type": "boolean",
-            "default": true
+            "const": true
         },
         "block_execution_if_missing": {
             "type": "boolean",
-            "default": true
+            "const": true
         }
     },
     "required": [
@@ -200,6 +224,12 @@
         "enforcement_rules",
         "protocols",
         "lifecycle_control",
-        "legal_enforcement"
+        "legal_enforcement",
+        "author_attribution_policy",
+        "open_source_mode",
+        "trademark_protection",
+        "hybrid_expansion_layer",
+        "block_if_schema_mismatch",
+        "block_execution_if_missing"
     ]
 }

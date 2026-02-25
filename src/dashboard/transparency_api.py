@@ -46,6 +46,23 @@ class TransparencyAPI:
         except:
             return {"error": "Unable to read governance data"}
 
+    def get_expansion_metrics(self):
+        """Returns hybrid expansion metrics and status."""
+        try:
+            with open(LOCK_FILE, 'r') as f:
+                lock = json.load(f)
+            return {
+                "hybrid_expansion_status": lock.get("hybrid_expansion_status", "INACTIVE"),
+                "active_global_nodes": lock.get("expansion_metrics", {}).get("active_global_nodes", 0),
+                "academic_partnerships": lock.get("expansion_metrics", {}).get("academic_partnerships", 0),
+                "institutional_collaborations": lock.get("expansion_metrics", {}).get("institutional_collaborations", 0),
+                "annual_budget": lock.get("expansion_metrics", {}).get("annual_budget", "N/A"),
+                "reserve_fund_status": lock.get("expansion_metrics", {}).get("reserve_fund_status", "N/A"),
+                "risk_level_distribution": lock.get("expansion_metrics", {}).get("risk_level_distribution", {})
+            }
+        except:
+            return {"error": "Unable to read expansion data"}
+
 if __name__ == "__main__":
     api = TransparencyAPI()
     print("Transparency API initialized (Mock Output):")

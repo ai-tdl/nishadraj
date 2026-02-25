@@ -1,0 +1,50 @@
+{
+    "execution_model": "strict_sequential",
+    "enforcement_rules": {
+        "dependency_enforcement": true,
+        "documentation_mandatory": true,
+        "code_integrity_check": true,
+        "maintainability_standards": true
+    },
+    "protocols": {
+        "error_handling": "strict",
+        "review_protocol": "mandatory",
+        "pre_execution_validation": true
+    },
+    "lifecycle_control": {
+        "autonomous_control": true,
+        "authorization_gating": true
+    },
+    "author_attribution_policy": {
+        "mandatory": true,
+        "author_name": "Jawahar R Mallah",
+        "require_in_all_generated_files": true
+    },
+    "legal_enforcement": {
+        "ownership_enforced": true,
+        "license_required": true,
+        "block_if_license_removed": true,
+        "require_ownership_header_in_all_files": true
+    },
+    "open_source_mode": {
+        "enabled": true,
+        "license": "AGPL-3.0",
+        "governance_protection_required": true,
+        "direct_commit_blocked": true,
+        "pull_request_required": true
+    },
+    "trademark_protection": {
+        "active": true,
+        "brand_name_protected": "NishadRaj OS",
+        "unauthorized_use_blocked": true
+    },
+    "hybrid_expansion_layer": {
+        "global_outreach_enabled": true,
+        "academic_partnerships_enabled": true,
+        "institutional_engagement_enabled": true,
+        "sustainable_revenue_model_enabled": true,
+        "neutrality_enforced": true
+    },
+    "block_if_schema_mismatch": true,
+    "block_execution_if_missing": true
+}
