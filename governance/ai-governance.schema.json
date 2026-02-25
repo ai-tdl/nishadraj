@@ -1,0 +1,188 @@
+{
+    "_meta": {
+        "project": "NishadRaj OS",
+        "author": "Jawahar R Mallah",
+        "role": "Software Architect",
+        "organization": "AITDL",
+        "websites": [
+            "https://aitdl.com",
+            "https://nishadraj.com"
+        ],
+        "governance_version": "1.1.0",
+        "copyright": "Copyright © Jawahar R Mallah | AITDL",
+        "usage": "All Rights Reserved"
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NishadRaj OS Governance Schema",
+    "description": "Deterministic enforcement layer for autonomous AI operations.",
+    "version": "1.1.0",
+    "status": "LOCKED",
+    "type": "object",
+    "properties": {
+        "execution_model": {
+            "type": "string",
+            "enum": [
+                "strict_sequential"
+            ],
+            "description": "Strict sequential execution model enforcement."
+        },
+        "enforcement_rules": {
+            "type": "object",
+            "properties": {
+                "dependency_enforcement": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "documentation_mandatory": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "code_integrity_check": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "maintainability_standards": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "protocols": {
+            "type": "object",
+            "properties": {
+                "error_handling": {
+                    "type": "string",
+                    "default": "strict"
+                },
+                "review_protocol": {
+                    "type": "string",
+                    "default": "mandatory"
+                },
+                "pre_execution_validation": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "lifecycle_control": {
+            "type": "object",
+            "properties": {
+                "autonomous_control": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "authorization_gating": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "author_attribution_policy": {
+            "type": "object",
+            "properties": {
+                "mandatory": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "author_name": {
+                    "type": "string",
+                    "default": "Jawahar R Mallah"
+                },
+                "role": {
+                    "type": "string",
+                    "default": "Software Architect"
+                },
+                "organization": {
+                    "type": "string",
+                    "default": "AITDL"
+                },
+                "websites": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "https://aitdl.com",
+                        "https://nishadraj.com"
+                    ]
+                },
+                "require_in_all_generated_files": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "file_types_enforced": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "json",
+                        "py",
+                        "md"
+                    ]
+                }
+            }
+        },
+        "legal_enforcement": {
+            "type": "object",
+            "properties": {
+                "ownership_enforced": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "license_required": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "block_if_license_removed": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "require_ownership_header_in_all_files": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "open_source_mode": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "license": {
+                    "type": "string",
+                    "default": "AGPL-3.0"
+                },
+                "governance_protection_required": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "direct_commit_blocked": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "pull_request_required": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "block_if_schema_mismatch": {
+            "type": "boolean",
+            "default": true
+        },
+        "block_execution_if_missing": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "required": [
+        "execution_model",
+        "enforcement_rules",
+        "protocols",
+        "lifecycle_control",
+        "legal_enforcement"
+    ]
+}

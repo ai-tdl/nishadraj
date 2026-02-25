@@ -1,0 +1,34 @@
+{
+    "registry_metadata": {
+        "version": "1.0.0",
+        "last_updated": "AUTO_TIMESTAMP"
+    },
+    "tasks": [
+        {
+            "task_id": "ARCH_001",
+            "name": "Initialize Core Architecture",
+            "priority": 1,
+            "status": "COMPLETED",
+            "dependencies": [],
+            "modules_affected": [
+                "core",
+                "database"
+            ],
+            "risk_level": "LOW"
+        },
+        {
+            "task_id": "API_001",
+            "name": "Implement Profile API",
+            "priority": 2,
+            "status": "PLANNED",
+            "dependencies": [
+                "ARCH_001"
+            ],
+            "modules_affected": [
+                "api",
+                "database"
+            ],
+            "risk_level": "MODERATE"
+        }
+    ]
+}

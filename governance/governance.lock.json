@@ -1,0 +1,36 @@
+{
+    "_meta": {
+        "project": "NishadRaj OS",
+        "author": "Jawahar R Mallah",
+        "role": "Software Architect",
+        "organization": "AITDL",
+        "websites": [
+            "https://aitdl.com",
+            "https://nishadraj.com"
+        ],
+        "governance_version": "1.1.0"
+    },
+    "governance_schema_hash": "C2986707B817EEE9EF63BAD73E69E7102668F0C89BC86A835D7E1B3C130EC1BE",
+    "task_registry_hash": "04373ecda49477be62970af012f4378b92be7c3cabd8e1e043ff4f7150e18db1",
+    "documentation_manifest_hash": "8896BB7652A941F7B2956E0FD9C7C8A8E7F1BCA3EC9F932489A4A174BC84A4D3",
+    "author_attribution_enforced": true,
+    "digital_signature_enforced": true,
+    "signature_algorithm": "RSA-4096",
+    "signature_required_for_execution": true,
+    "legal_layer_active": true,
+    "license_model": "OPEN_SOURCE_CONTROLLED",
+    "ownership_verified": true,
+    "block_if_schema_mismatch": true,
+    "block_if_hash_mismatch": true,
+    "allow_execution": true,
+    "system_status": "ACTIVE",
+    "security_layer": "ACTIVE",
+    "legal_status": "ACTIVE",
+    "AUTHOR_ATTRIBUTION_MODE": "ACTIVE",
+    "open_source_mode": "ACTIVE",
+    "ci_cd_enforced": true,
+    "multi_agent_mode": "ACTIVE",
+    "transparency_dashboard": "ACTIVE",
+    "fork_monitoring": "ACTIVE",
+    "brand_status": "PUBLIC_READY"
+}
